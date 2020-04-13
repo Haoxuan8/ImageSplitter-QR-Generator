@@ -1,0 +1,70 @@
+@mixin l-layout {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin m-layout {
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin s-layout {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin xs-layout {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.container {
+  width: 1170px;
+  padding: 20px 15px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: all .5s ease;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include l-layout {
+    width: 1170px;
+  }
+  @include m-layout {
+    width: 970px;
+  }
+  @include s-layout {
+    width: 750px;
+  }
+  @include xs-layout {
+    width: 100%;
+  }
+
+}
+
+.text-b {
+  font-weight: 700;
+}
+
+input, button {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

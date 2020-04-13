@@ -1,0 +1,164 @@
+.image-selector {
+  display: inline-block;
+  width: 66%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: $sakura-light;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all .5s ease;
+  position: relative;
+
+  @include xs-layout {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $sakura-m;
+    .in .content .icon {
+      transform: translateY(-10px);
+      background-color: $momo;
+    }
+  }
+
+  .in {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 310px;
+    border: 2px dashed $sakura;
+    border-radius: 10px;
+    background-color: $bg-white;
+
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+
+      .icon {
+        position: relative;
+        display: inline-block;
+        width: 8%;
+        padding: 14px;
+        border-radius: 50%;
+        background-color: $sakura;
+        transition: all .5s ease;
+                       
+        img {
+          width: 100%;
+        }
+
+        .file-input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          opacity: 0;
+          width: 100px;
+          height: 200px;
+          cursor: pointer;
+        }
+      }
+
+      .text {
+        margin-top: 17px;
+        font-size: 26px;
+        color: $sakura;
+      }
+    }
+  }
+
+  .img-show {
+    width: 100%;
+  }
+  .file-input-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.splitter-params {
+  width: 28%;
+  display: inline-block;
+  min-height: 332px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: $bg-white;
+  box-shadow: $card-shadow-base;
+  margin-left: 5%;
+  transition: all .5s ease-out;
+  text-align: left;
+  position: relative;
+  vertical-align: top;
+
+  @include xs-layout {
+    width: 100%;
+    margin: 20px 0;
+    min-height: 230px;
+  }
+  
+  &:hover {
+    box-shadow: $card-shadow-base-hover;
+  }
+
+  .text {
+    font-size: 25px;
+    color: $sakura;
+  }
+
+  .size-input {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: $card-shadow;
+    padding: 10px 17px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 20px 0;
+    color: $purple-deep;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: all .3s ease-out;
+
+    &:focus {
+      box-shadow: $card-shadow-base;
+    }
+  }
+
+  .split-btn-ct {
+    padding-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .split-btn {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      width: 100%;
+      height: 46px;
+      background-color: $sakura-light;
+      color: $sakura;
+      border-radius: 15px;
+      transition: all .3s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $bg-white;
+        border: 3px $sakura solid;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
