@@ -1,0 +1,36 @@
+.qr-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 3px solid $sakura;
+  border-radius: 25px;
+  margin: 30px 0;
+  padding: 20px 60px;
+  transition: .4s all ease-out;
+  box-shadow: $card-shadow-base;
+
+  &:hover {
+    box-shadow: $card-shadow-base-hover;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: $sakura;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+  }
+  .qr-img-container {
+    .qr-img {
+      width: $preview-size;
+    }
+  }
+
+  .canvas-container {
+    canvas {
+      width: $preview-size;
+      height: $preview-size;
+    }
+  }
+}

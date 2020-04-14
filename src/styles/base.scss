@@ -22,6 +22,30 @@
   }
 }
 
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  src: url('../assets/fonts/BalooPaaji2-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  src: url('../assets/fonts/BalooPaaji2-Regular.ttf');
+}
+
+* {
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: $purple;
+  transition: .3s all ease-out;
+  &:hover {
+    color: $purple-dim;
+  }
+}
+
 .container {
   width: 1170px;
   padding: 20px 15px;
@@ -31,6 +55,21 @@
   transition: all .5s ease;
   overflow: hidden;
   box-sizing: border-box;
+
+  p {
+    font-size: 36px;
+    text-align: left;
+    color: $sakura;
+    font-weight: 700;
+    margin: 0;
+  }
+  .git-ref {
+    margin-bottom: 35px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
   @include l-layout {
     width: 1170px;
   }
@@ -43,7 +82,6 @@
   @include xs-layout {
     width: 100%;
   }
-
 }
 
 .text-b {

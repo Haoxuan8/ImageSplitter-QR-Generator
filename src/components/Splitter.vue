@@ -75,6 +75,7 @@ export default{
       }
       reader.readAsDataURL(files[0]);
       this.splitSize = 0;
+      this.$emit('splitted',false);
     },
     updatePieces() {
       if(!this.img || !this.splitSize) 
@@ -121,7 +122,12 @@ export default{
       for(let i=0;i<this.vPieces;i++){
         for(let j=0;j<this.hPieces;j++){
           ctx.drawImage(this.img,-j*this.splitSize-leftOffset,-i*this.splitSize-topOffset,width,height);
-          imgPieces.push(canvas.toDataURL());
+
+          imgPieces.push({
+            key: Math.random(),
+            url: canvas.toDataURL(),
+            title: 'tile' + i + '-' + j
+            });
         }
       }
       this.$emit('splitted',imgPieces);
