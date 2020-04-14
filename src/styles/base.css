@@ -1,0 +1,56 @@
+.container {
+  width: 1170px;
+  padding: 20px 15px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.container p {
+  font-size: 36px;
+  text-align: left;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+.text-b {
+  font-weight: 700;
+}
+input,
+button {
+  border: none;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
