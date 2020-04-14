@@ -33,6 +33,17 @@
   src: url('../assets/fonts/BalooPaaji2-Regular.ttf');
 }
 
+[data-aos="up"] {
+  transform: translateY(25px);
+  opacity: 0;
+  transition-property: all;
+
+  &.aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 * {
   font-family: 'Baloo Paaji 2', cursive;
 }
@@ -45,6 +56,7 @@ a {
     color: $purple-dim;
   }
 }
+
 
 .container {
   width: 1170px;

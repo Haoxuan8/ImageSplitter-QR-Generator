@@ -9,9 +9,9 @@
       <div v-if="imgPieces">
           <QRcode v-for="imgPiece in imgPieces" :key="imgPiece.key"
            :imgPiece="imgPiece" 
-           data-aos="fade-up" data-aos-offset="50"
-            data-aos-delay="20"
-            data-aos-duration="800" />
+           data-aos="up" data-aos-offset="50"
+            data-aos-delay="10"
+            data-aos-duration="500" />
       </div>
     </div>
   </div>
