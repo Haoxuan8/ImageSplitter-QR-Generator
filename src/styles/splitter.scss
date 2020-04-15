@@ -148,6 +148,18 @@
     color: $sakura;
   }
 
+  .size-input-container {
+    position: relative;
+    span {
+      position: absolute;
+      right: 6%;
+      top: 27%;
+      font-size: 25px;
+      color: $purple-deep;
+      font-weight: 700;
+    }
+  }
+
   .size-input {
     width: 100%;
     box-sizing: border-box;
@@ -181,7 +193,9 @@
         box-shadow: $card-shadow;
       }
     }  
-
+    .btn-sub {
+      background-color: $bg-dark-line;
+    }
     .btn-plus {
       background-color: $sakura-m;
     }

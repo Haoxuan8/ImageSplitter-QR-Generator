@@ -28,7 +28,10 @@
       <div>
         <span class='text text-b'>split-size</span>
       </div>
+      <div class="size-input-container">
+        <span>px</span>
         <input class="size-input" type="number" v-model.lazy.number="splitSize" @change="renderBox">
+      </div>
         <div class="btn-group">
           <button class="btn-sub" @click="decrement">-</button>
           <button class="btn-plus" @click="increment">+</button>
